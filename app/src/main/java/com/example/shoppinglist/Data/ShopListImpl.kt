@@ -6,7 +6,7 @@ import com.example.shoppinglist.Domain.ShopItem
 import com.example.shoppinglist.Domain.ShopListRepository
 import java.util.SortedSet
 
-class ShopListImpl: ShopListRepository {
+object ShopListImpl: ShopListRepository {
 
     private var shopListLD = MutableLiveData<List<ShopItem>>()
     private var shopList = sortedSetOf<ShopItem>({ p0, p1 -> p0.id.compareTo(p1.id) })
